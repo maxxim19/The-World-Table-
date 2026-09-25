@@ -241,7 +241,10 @@
             <label><span>Event date</span><input type="date" name="date" /></label>
             <label><span>Approx. guests</span><input type="number" name="guests" min="1" placeholder="e.g. 40" /></label>
           </div>
-          <label><span>Country or cuisine</span><input id="country-input" type="text" name="country" placeholder="e.g. German kitchen, French cellar" /></label>
+          <div class="form-grid two pairing-request-fields">
+            <label><span>Food / kitchen</span><input id="food-input" type="text" name="food" placeholder="e.g. German kitchen" /></label>
+            <label><span>Wine / cellar</span><input id="wine-input" type="text" name="wine" placeholder="e.g. French cellar" /></label>
+          </div>
           <label><span>Tell us about the event</span><textarea id="details-input" name="details" rows="5" placeholder="Venue, occasion, dietary needs, anything else we should know"></textarea></label>
           <button class="btn btn-dark" type="submit">Request a proposal</button>
         </form>

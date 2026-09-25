@@ -250,17 +250,17 @@ textarea { resize: vertical; }
   .container, .narrow { width: min(100% - 38px, 1180px); }
   .section { padding: 68px 0; }
   body { line-height: 1.58; }
-  h1 { font-size: clamp(3.65rem, 16.5vw, 5.15rem); line-height: .89; margin-bottom: 24px; }
+  h1 { font-size: clamp(4.15rem, 19vw, 5.75rem); line-height: .84; margin-bottom: 30px; max-width: 330px; }
   h2 { font-size: clamp(3.1rem, 14vw, 4.6rem); }
   h3 { font-size: 2rem; }
-  .site-header { padding: 16px 20px; }
+  .site-header { padding: 22px 20px; }
   .brand-name { display: none; }
-  .brand-mark { width: 36px; height: 36px; font-size: .72rem; }
+  .brand-mark { width: 42px; height: 42px; font-size: .78rem; }
   .menu-toggle span { width: 26px; margin: 6px 0; }
-  .hero-content { padding-bottom: 66px; }
-  .hero-content .eyebrow { margin-bottom: 12px; font-size: .62rem; letter-spacing: .18em; }
-  .hero-copy { max-width: 330px; font-size: 1rem; line-height: 1.55; margin-bottom: 22px; }
-  .hero-foot { display: none; }
+  .hero-content { padding-bottom: 92px; }
+  .hero-content .eyebrow { position: absolute; top: -70px; left: 0; margin: 0; font-size: .66rem; letter-spacing: .20em; white-space: nowrap; }
+  .hero-copy { max-width: 350px; font-size: 1rem; line-height: 1.55; margin-bottom: 28px; }
+  .hero-foot { display: block; right: auto; left: 20px; bottom: 24px; font-size: .58rem; letter-spacing: .09em; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; }
   .hero-actions .btn { padding: 15px 20px; }
   .experience-grid { grid-template-columns: 1fr; }
@@ -285,7 +285,8 @@ textarea { resize: vertical; }
 }
 
 @media (max-width: 390px) {
-  .hero-content .eyebrow { display: none; }
-  .hero-content { padding-bottom: 58px; }
-  h1 { font-size: clamp(3.45rem, 16.2vw, 4.7rem); }
+  .hero-content { padding-bottom: 88px; }
+  .hero-content .eyebrow { font-size: .58rem; letter-spacing: .16em; }
+  h1 { font-size: clamp(3.9rem, 18.5vw, 5.1rem); max-width: 300px; }
+  .hero-copy { max-width: 320px; }
 }

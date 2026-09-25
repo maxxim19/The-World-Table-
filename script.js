@@ -67,7 +67,8 @@ const kitchenName = document.getElementById('kitchen-name');
 const cellarName = document.getElementById('cellar-name');
 const pairingCopy = document.getElementById('pairing-copy');
 const planPairing = document.getElementById('plan-pairing');
-const countryInput = document.getElementById('country-input');
+const foodInput = document.getElementById('food-input');
+const wineInput = document.getElementById('wine-input');
 const detailsInput = document.getElementById('details-input');
 const inquirySection = document.getElementById('inquire');
 
@@ -115,21 +116,26 @@ updatePairing();
 planPairing?.addEventListener('click', () => {
   const label = pairingLabel();
 
-  if (countryInput) {
-    countryInput.value = label;
-    countryInput.classList.add('prefilled');
-    window.setTimeout(() => countryInput.classList.remove('prefilled'), 1400);
+  const kitchenLabel = kitchen?.value === 'Custom' ? 'Custom kitchen' : `${adjective[kitchen?.value] || kitchen?.value} kitchen`;
+  const cellarLabel = cellar?.value === 'Custom' ? 'Custom cellar' : `${adjective[cellar?.value] || cellar?.value} cellar`;
+
+  if (foodInput) {
+    foodInput.value = kitchenLabel;
+    foodInput.classList.add('prefilled');
+    window.setTimeout(() => foodInput.classList.remove('prefilled'), 1400);
+  }
+  if (wineInput) {
+    wineInput.value = cellarLabel;
+    wineInput.classList.add('prefilled');
+    window.setTimeout(() => wineInput.classList.remove('prefilled'), 1400);
   }
 
-  // Add a light contextual note only when the user has not started typing their own details.
-  if (detailsInput && !detailsInput.value.trim()) {
-    detailsInput.value = `I’m interested in the ${label} pairing. ${pairingCopy?.textContent || ''}`;
-  }
-
+  // Keep the event-details field completely separate from the pairing description.
+  // The guest can use it only for venue, occasion, dietary needs, or other notes.
   inquirySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   window.setTimeout(() => {
-    countryInput?.focus({ preventScroll: true });
+    foodInput?.focus({ preventScroll: true });
   }, 650);
 });
 
