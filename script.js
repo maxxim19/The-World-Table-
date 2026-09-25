@@ -141,3 +141,92 @@ planPairing?.addEventListener('click', () => {
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+
+// Premium, restrained motion. Everything still works if JavaScript is disabled.
+requestAnimationFrame(() => document.body.classList.add('is-ready'));
+
+const revealTargets = [
+  ...document.querySelectorAll('.intro > *, .section-heading > *, .experience-card, .pairing-copy > *, .pairing-card, .format-card, .occasion-list article, .story-image, .story-copy > *, .process-grid article, .inquire-copy > *, .inquiry-form')
+];
+
+revealTargets.forEach((element, index) => {
+  element.classList.add('reveal-item');
+  if (element.matches('.story-image, .inquire-copy')) element.classList.add('reveal-left');
+  if (element.matches('.story-copy > *, .inquiry-form')) element.classList.add('reveal-right');
+  if (element.matches('.experience-card:nth-child(2), .format-card:nth-child(2)')) element.classList.add('reveal-delay-1');
+  if (element.matches('.experience-card:nth-child(3)')) element.classList.add('reveal-delay-2');
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
+  revealTargets.forEach((element) => revealObserver.observe(element));
+} else {
+  revealTargets.forEach((element) => element.classList.add('is-visible'));
+}
+
+// Very light parallax only on larger pointers/screens; mobile keeps the original composition.
+const heroMedia = document.querySelector('.hero-media');
+const atmosphereMedia = document.querySelector('.atmosphere-media');
+const atmosphereSection = document.querySelector('.atmosphere');
+const canParallax = window.matchMedia('(min-width: 921px) and (pointer: fine)');
+
+function applyParallax() {
+  if (!canParallax.matches) return;
+  const y = window.scrollY;
+  if (heroMedia && y < window.innerHeight * 1.25) {
+    heroMedia.style.translate = `0 ${Math.min(y * 0.10, 70)}px`;
+  }
+  if (atmosphereMedia && atmosphereSection) {
+    const rect = atmosphereSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      atmosphereMedia.style.translate = `0 ${(progress - .5) * 46}px`;
+    }
+  }
+}
+window.addEventListener('scroll', applyParallax, { passive: true });
+applyParallax();
+
+// Country cards now act as an elegant entry point into the pairing configurator.
+document.querySelectorAll('.card-explore[data-kitchen]').forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!kitchen) return;
+    const requestedKitchen = button.dataset.kitchen;
+    if ([...kitchen.options].some((option) => option.value === requestedKitchen)) {
+      kitchen.value = requestedKitchen;
+      updatePairing();
+      document.getElementById('pairings')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.setTimeout(() => kitchen.focus({ preventScroll: true }), 650);
+    }
+  });
+});
+
+// Animate the result itself when a pairing changes, instead of snapping instantly.
+const pairingResult = document.querySelector('.pairing-result');
+const pairingCard = document.querySelector('.pairing-card');
+function animatePairingUpdate() {
+  if (!pairingResult) return;
+  pairingResult.classList.add('is-changing');
+  pairingCard?.classList.remove('pairing-active');
+  window.setTimeout(() => {
+    updatePairing();
+    pairingResult.classList.remove('is-changing');
+    pairingCard?.classList.add('pairing-active');
+  }, 180);
+}
+
+// Replace the earlier direct listeners so changes use the premium transition.
+if (kitchen && cellar) {
+  kitchen.removeEventListener('change', updatePairing);
+  cellar.removeEventListener('change', updatePairing);
+  kitchen.addEventListener('change', animatePairingUpdate);
+  cellar.addEventListener('change', animatePairingUpdate);
+  pairingCard?.classList.add('pairing-active');
+}
