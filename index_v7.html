@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The World Table — private, corporate and diplomatic catering inspired by countries around the world." />
+  <title>The World Table — International Catering</title>
+  <!-- Build: v7 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_v7.css" />
+</head>
+<body>
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-starter" viewBox="0 0 24 24">
+      <path d="M5 16.5h14M7 14c.3-2.6 2.2-4.3 5-4.3s4.7 1.7 5 4.3H7Z" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="12" cy="9" rx="2.2" ry="1.25" fill="var(--icon-accent,#c29a45)" stroke="none"/>
+    </symbol>
+    <symbol id="icon-bowl" viewBox="0 0 24 24">
+      <path d="M5 10.5h14c-.4 4-3.2 6.7-7 6.7s-6.6-2.7-7-6.7ZM8.5 19h7" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8.5 7.7c0-1 .8-1.5 1.25-2.15.45-.64.5-1.16.2-1.85M13 7.7c0-1 .8-1.5 1.25-2.15.45-.64.5-1.16.2-1.85" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      <path d="M6.3 11.2h11.4c-.22.8-.54 1.5-.94 2.08H7.24c-.4-.58-.72-1.28-.94-2.08Z" fill="var(--icon-accent,#d8b55b)" stroke="none" opacity=".72"/>
+    </symbol>
+    <symbol id="icon-cloche" viewBox="0 0 24 24">
+      <path d="M5 15.7h14M6.7 15.7c0-3.9 2.1-6.6 5.3-6.6s5.3 2.7 5.3 6.6M4 18.4h16" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="7.1" r="1.15" fill="var(--icon-accent,#c29a45)" stroke="none"/>
+    </symbol>
+    <symbol id="icon-dessert" viewBox="0 0 24 24">
+      <path d="M6 10.8 18 8.3v9.3H6v-6.8ZM6 14h12" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round"/>
+      <path d="M7.2 11.7 16.8 9.7v2.1l-9.6 1.9v-2Z" fill="var(--icon-accent,#a8253d)" stroke="none" opacity=".9"/>
+      <circle cx="15.5" cy="6.9" r="1.15" fill="var(--icon-accent,#a8253d)" stroke="none"/>
+    </symbol>
+    <symbol id="icon-flute" viewBox="0 0 24 24">
+      <path d="M8.6 4.2h6.8l-.75 6.2c-.22 2-1.12 3.1-2.65 3.1s-2.43-1.1-2.65-3.1l-.75-6.2ZM12 13.5v5M9.6 20h4.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.2 7.2h5.6l-.42 3.1c-.18 1.35-.91 2.1-2.38 2.1s-2.2-.75-2.38-2.1l-.42-3.1Z" fill="var(--icon-accent,#ddb64e)" stroke="none" opacity=".9"/>
+    </symbol>
+    <symbol id="icon-wine" viewBox="0 0 24 24">
+      <path d="M7.8 4.3h8.4l-.65 5.85c-.27 2.35-1.4 3.65-3.55 3.65s-3.28-1.3-3.55-3.65L7.8 4.3ZM12 13.8v5M9.6 20h4.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8.5 8.8h7l-.15 1.32c-.2 1.74-1.02 2.62-3.35 2.62s-3.15-.88-3.35-2.62L8.5 8.8Z" fill="var(--icon-accent,#8a263d)" stroke="none" opacity=".93"/>
+    </symbol>
+    <symbol id="icon-cocktail" viewBox="0 0 24 24">
+      <path d="M5 5.4h14l-7 7.8-7-7.8ZM12 13.2v5.4M8.6 20h6.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7.4 7h9.2L12 12.05 7.4 7Z" fill="var(--icon-accent,#b54a34)" stroke="none" opacity=".9"/>
+    </symbol>
+    <symbol id="icon-tumbler" viewBox="0 0 24 24">
+      <path d="M6.8 6.2h10.4l-.85 12H7.65l-.85-12Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M7.35 12.2h9.3l-.42 5.05H7.77l-.42-5.05Z" fill="var(--icon-accent,#bf7d2b)" stroke="none" opacity=".88"/>
+      <path d="m10.2 9 3.8 4" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="The World Table home">
+      <span class="brand-mark">TWT</span>
+      <span class="brand-name">The World Table</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#experiences">Countries</a>
+      <a href="#formats">Formats</a>
+      <a href="#story">Our story</a>
+      <a class="nav-cta" href="#inquire">Plan an event</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" role="img" aria-label="Elegant dinner table set for a private event"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow light">Private · Corporate · Diplomatic</p>
+        <h1>Bring any country<br>to the table.</h1>
+        <p class="hero-copy">International catering with menus, wine, cocktails and details inspired by the country you choose.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#experiences">Explore tables</a>
+          <a class="text-link light" href="#inquire">Plan an event <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-foot">Atlanta & Southeast · Seated dinners · Receptions · Galas</div>
+    </section>
+
+    <section class="intro section container narrow">
+      <p class="kicker">A different way to cater</p>
+      <h2>Every guest comes from somewhere.</h2>
+      <p class="lead">We build thoughtful events around the places that matter to you — a family heritage, a city you love, a client delegation, or a country you simply want to discover.</p>
+    </section>
+
+    <section class="experiences section country-showcase" id="experiences">
+      <div class="container country-menu-heading">
+        <div>
+          <p class="kicker">Country experiences</p>
+          <h2>Our most requested countries.</h2>
+          <p class="country-menu-intro">These are sample directions, not fixed packages. Start with a country, then we tailor the courses, wine, spirits and service around your guests and occasion.</p>
+        </div>
+      </div>
+
+      <div class="country-scroll-hint container" aria-hidden="true">Swipe to explore sample tables <span>→</span></div>
+
+      <div class="country-menu-grid">
+        <article class="country-menu-card" data-country="Germany" role="button" tabindex="0" aria-label="Use Germany as the starting country">
+          <header class="country-card-head">
+            <h3>Germany</h3>
+            <span class="flag-pips flag-germany" aria-hidden="true"><i></i><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Pretzel bites with Obatzda</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Maultaschen in beef consommé</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Sauerbraten, red cabbage and spätzle</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Black Forest cherry torte</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Sekt</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Mosel Riesling Kabinett</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Spätburgunder from Baden</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Riesling Auslese</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Obstbrand digestifs and German gin</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="France" role="button" tabindex="0" aria-label="Use France as the starting country">
+          <header class="country-card-head">
+            <h3>France</h3>
+            <span class="flag-pips flag-france" aria-hidden="true"><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Gougères</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Bouillabaisse, Marseille style</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Coq au vin</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Tarte Tatin</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Champagne</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Chablis Premier Cru</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Burgundy Pinot Noir</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Sauternes</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Cognac, calvados and French 75s</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Italy" role="button" tabindex="0" aria-label="Use Italy as the starting country">
+          <header class="country-card-head">
+            <h3>Italy</h3>
+            <span class="flag-pips flag-italy" aria-hidden="true"><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Vitello tonnato</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Risotto alla Milanese</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Osso buco with gremolata</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Tiramisù</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Franciacorta</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Soave Classico</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Barolo</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Moscato d’Asti</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cocktail"></use></svg><span>Negronis and a flight of amari</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Spain" role="button" tabindex="0" aria-label="Use Spain as the starting country">
+          <header class="country-card-head">
+            <h3>Spain</h3>
+            <span class="flag-pips flag-spain" aria-hidden="true"><i></i><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Jamón ibérico de bellota</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Gazpacho andaluz</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Paella valenciana</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Crema catalana</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Cava</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Albariño from Rías Baixas</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Rioja Gran Reserva</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Pedro Ximénez sherry</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cocktail"></use></svg><span>Gin tonics and chilled fino</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Japan" role="button" tabindex="0" aria-label="Use Japan as the starting country">
+          <header class="country-card-head">
+            <h3>Japan</h3>
+            <span class="flag-pips flag-japan" aria-hidden="true"><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Seasonal sashimi</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Chawanmushi</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Charcoal-seared wagyu</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Matcha warabi mochi</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-pale" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Sparkling sake</span></li><li><svg class="menu-icon tone-pale" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Junmai daiginjo</span></li><li><svg class="menu-icon tone-pale" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Aged junmai, served warm</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Umeshu</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Japanese whisky highballs</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Argentina" role="button" tabindex="0" aria-label="Use Argentina as the starting country">
+          <header class="country-card-head">
+            <h3>Argentina</h3>
+            <span class="flag-pips flag-argentina" aria-hidden="true"><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Beef empanadas</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Provoleta</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Asado with chimichurri</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Alfajores de maicena</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Sparkling from Mendoza</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Torrontés from Salta</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Malbec from the Uco Valley</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Late harvest Torrontés</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cocktail"></use></svg><span>Fernet con coca and Malbec cocktails</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Greece" role="button" tabindex="0" aria-label="Use Greece as the starting country">
+          <header class="country-card-head">
+            <h3>Greece</h3>
+            <span class="flag-pips flag-greece" aria-hidden="true"><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Taramosalata and dolmades</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Grilled octopus</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Lamb kleftiko</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Galaktoboureko</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Sparkling from Amyndeon</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Assyrtiko from Santorini</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Xinomavro from Naoussa</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Vinsanto from Santorini</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Ouzo and tsipouro</span></li></ul>
+            </div>
+          </div>
+        </article>
+        <article class="country-menu-card" data-country="Mexico" role="button" tabindex="0" aria-label="Use Mexico as the starting country">
+          <header class="country-card-head">
+            <h3>Mexico</h3>
+            <span class="flag-pips flag-mexico" aria-hidden="true"><i></i><i></i></span>
+          </header>
+          <div class="country-card-body">
+            <div class="menu-group">
+              <p class="menu-label">Kitchen</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-starter"></use></svg><span>Aguachile</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bowl"></use></svg><span>Tamales oaxaqueños</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cloche"></use></svg><span>Mole negro</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-dessert"></use></svg><span>Churros with Mexican chocolate</span></li></ul>
+            </div>
+            <div class="menu-group cellar-group">
+              <p class="menu-label">Cellar and bar</p>
+              <ul><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flute"></use></svg><span>Sparkling from Valle de Guadalupe</span></li><li><svg class="menu-icon tone-gold" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>White blend from Baja</span></li><li><svg class="menu-icon tone-red" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wine"></use></svg><span>Nebbiolo from Valle de Guadalupe</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Añejo tequila</span></li><li><svg class="menu-icon tone-amber" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-tumbler"></use></svg><span>Mezcal served with orange and sal de gusano</span></li></ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="all-countries container">
+        <p class="script">Every country in the world is welcome.</p>
+        <a href="#inquire" class="text-link">Tell us where you want to go <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="pairing section" id="pairings">
+      <div class="container pairing-layout">
+        <div class="pairing-copy">
+          <p class="kicker">Nothing is fixed</p>
+          <h2>Pair one country’s kitchen with another’s cellar.</h2>
+          <p class="lead-sm">German dinner with French wine. Japanese menu with Spanish cava. Or choose custom and tell us exactly what you have in mind.</p>
+          <ul class="check-list">
+            <li>Mix kitchen and cellar</li>
+            <li>Swap dishes and courses</li>
+            <li>Adjust for allergies and dietary needs</li>
+          </ul>
+        </div>
+
+        <div class="pairing-card" aria-live="polite">
+          <div class="selector-row">
+            <label for="kitchen">Kitchen</label>
+            <select id="kitchen">
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Japan">Japan</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Greece">Greece</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Custom">Custom</option>
+            </select>
+          </div>
+          <div class="selector-row">
+            <label for="cellar">Cellar</label>
+            <select id="cellar">
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Japan">Japan</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Greece">Greece</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Custom">Custom</option>
+            </select>
+          </div>
+          <div class="pairing-result">
+            <p class="eyebrow">Your pairing</p>
+            <h3><span id="kitchen-name">German</span> kitchen,<br><span id="cellar-name">French</span> cellar</h3>
+            <p id="pairing-copy">Sauerbraten, red cabbage and spätzle with Burgundy Pinot Noir, followed by Black Forest cherry torte with Sauternes.</p>
+            <button class="pairing-plan-btn" id="plan-pairing" type="button">Plan this pairing <span>↘</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formats section" id="formats">
+      <div class="container section-heading center-heading">
+        <p class="kicker">Two ways to host</p>
+        <h2>Formal or relaxed,<br>the story stays the same.</h2>
+      </div>
+
+      <div class="format-grid container">
+        <article class="format-card seated">
+          <div class="format-photo" role="img" aria-label="Formal seated dinner"></div>
+          <div class="format-content">
+            <p class="eyebrow">Seated</p>
+            <h3>The seated dinner</h3>
+            <p>A plated meal served course by course. Best for dinners, anniversaries and evenings centered around a guest of honor.</p>
+            <dl>
+              <div><dt>Food</dt><dd>Four courses, plated and served</dd></div>
+              <div><dt>Wine</dt><dd>Sommelier-led pairings included</dd></div>
+              <div><dt>Story</dt><dd>Heritage card at every place</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="format-card reception">
+          <div class="format-photo" role="img" aria-label="Relaxed cocktail reception"></div>
+          <div class="format-content">
+            <p class="eyebrow">Reception</p>
+            <h3>The bar & food table</h3>
+            <p>A relaxed walk-around spread with guests free to mingle. Ideal for office parties, cultural evenings and cocktail hours.</p>
+            <dl>
+              <div><dt>Food</dt><dd>Signature dishes styled for sharing</dd></div>
+              <div><dt>Bar</dt><dd>Bartender service included</dd></div>
+              <div><dt>Flow</dt><dd>Designed for movement and conversation</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="atmosphere" aria-label="The World Table hospitality experience">
+      <div class="atmosphere-media" role="img" aria-label="Elegant candlelit table prepared for an intimate dinner"></div>
+      <div class="atmosphere-overlay"></div>
+      <div class="container atmosphere-content">
+        <p class="kicker light">Considered from arrival to final pour</p>
+        <h2>Hospitality should feel effortless.</h2>
+        <p>Menu design, wine pairing, bar service, dietary requirements and service flow are coordinated as one experience — with cultural traditions and protocol considerations handled discreetly when needed.</p>
+      </div>
+    </section>
+
+    <section class="occasions section">
+      <div class="container occasions-layout">
+        <div>
+          <p class="kicker">Made for the occasion</p>
+          <h2>Hospitality with a point of view.</h2>
+        </div>
+        <div class="occasion-list">
+          <article><span>01</span><div><h3>Private dinners</h3><p>Birthdays, anniversaries, family gatherings and evenings that deserve more than a standard menu.</p></div></article>
+          <article><span>02</span><div><h3>Corporate & client events</h3><p>Client dinners, office celebrations and receptions with an international point of view.</p></div></article>
+          <article><span>03</span><div><h3>Receptions & galas</h3><p>National days, cultural evenings and diplomatic gatherings hosted with polish and discretion.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="container story-layout">
+        <div class="story-image" role="img" aria-label="Formal international reception table"></div>
+        <div class="story-copy">
+          <p class="kicker">Our story</p>
+          <blockquote>“We learned to host at tables where every guest came from somewhere else.”</blockquote>
+          <p>Our founders grew up around residences and receptions where people from dozens of countries shared a meal. One was raised in a diplomatic household, where hosting the world was part of ordinary life.</p>
+          <p>Those evenings taught us that a thoughtful menu is a way of welcoming someone. The World Table brings that same attention to every dinner, celebration and reception we cater.</p>
+          <div class="signature">The World Table</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="container section-heading split-heading">
+        <div>
+          <p class="kicker">How it works</p>
+          <h2>Simple for you.<br>Detailed for us.</h2>
+        </div>
+        <p>One proposal can cover the menu, beverages, décor and staffing. On the day, we cook, pour, serve and clear.</p>
+      </div>
+      <div class="process-grid container">
+        <article><span>01</span><h3>Start with a country</h3><p>Choose a table or tell us about your guests and the places that matter to them.</p></article>
+        <article><span>02</span><h3>Choose the format</h3><p>Seated dinner or reception. We adapt the service to your space, guest count and mood.</p></article>
+        <article><span>03</span><h3>Refine the details</h3><p>We tailor dishes, pairings, dietary needs, timing, styling and service.</p></article>
+        <article><span>04</span><h3>We handle the rest</h3><p>Your final proposal covers what you need. Then we arrive, host and leave the space clear.</p></article>
+      </div>
+    </section>
+
+    <section class="inquire section" id="inquire">
+      <div class="container inquire-layout">
+        <div class="inquire-copy">
+          <p class="kicker light">Plan an event</p>
+          <h2>Tell us where the table should take you.</h2>
+          <p>Send the basics and we’ll reply with next steps. Detailed menu and service choices can come later.</p>
+          <div class="contact-note">Private · Corporate · Diplomatic catering across the Southeast</div>
+        </div>
+
+        <!-- Add your EXISTING Formspree ID here. Do not change the recipient in your dashboard. -->
+        <form class="inquiry-form" id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Event inquiry">
+          <div class="form-grid two">
+            <label><span>Your name</span><input type="text" name="name" required /></label>
+            <label><span>Email</span><input type="email" name="email" required /></label>
+          </div>
+          <div class="form-grid two">
+            <label><span>Event date</span><input type="date" name="date" /></label>
+            <label><span>Approx. guests</span><input type="number" name="guests" min="1" placeholder="e.g. 40" /></label>
+          </div>
+          <div class="form-grid two pairing-request-fields">
+            <label><span>Food / kitchen</span><input id="food-input" type="text" name="food" placeholder="e.g. German kitchen" /></label>
+            <label><span>Wine / cellar</span><input id="wine-input" type="text" name="wine" placeholder="e.g. French cellar" /></label>
+          </div>
+          <label><span>Tell us about the event</span><textarea id="details-input" name="details" rows="5" placeholder="Venue, occasion, dietary needs, anything else we should know"></textarea></label>
+          <button class="btn btn-dark" type="submit" id="inquiry-submit">Request a proposal</button>
+          <p class="form-status" id="inquiry-error" role="alert" hidden></p>
+        </form>
+        <div class="inquiry-success" id="inquiry-success" role="status" tabindex="-1" aria-live="polite" hidden>
+          <span class="success-kicker">THE WORLD TABLE</span>
+          <span class="success-rule" aria-hidden="true"></span>
+          <h3>Thank you for your inquiry.</h3>
+          <p>We’ve received your request and look forward to learning more about your occasion. We’ll be in touch shortly.</p>
+          <a class="success-return" href="#top">Return to the World Table <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><div class="footer-brand">The World Table</div><p>International catering built around place, story and hospitality.</p></div>
+      <div class="footer-links"><a href="#experiences">Countries</a><a href="#formats">Formats</a><a href="#story">Story</a><a href="#inquire">Contact</a></div>
+      <div class="footer-note">Atlanta & Southeast<br>Private · Corporate · Diplomatic</div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> The World Table</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <script src="script_v7.js"></script>
+</body>
+</html>
